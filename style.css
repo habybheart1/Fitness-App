@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+:root {
+  --font-color: #111;
+  --secondary-color: #61a0ff;
+  --background-faint-color: #f6f6f8;
+}
+.header-container {
+  max-width: 1200px;
+  margin: 15px 20px;
+  text-align: center;
+}
+.header-logo img {
+  width: 8.5rem;
+  margin-top: 0.5rem;
+}
+/* contain the logo, li and icon */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+.menu-toggle {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+/* desktop view */
+.desktop-menu {
+  display: none;
+}
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+  .navbar {
+    padding: 1rem 1.5rem;
+    text-align: center;
+  }
+  .desktop-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.25rem;
+    margin: 0;
+    font-weight: 600;
+  }
+  .desktop-menu li {
+    list-style: none;
+  }
+  .desktop-menu li a {
+    text-decoration: none;
+    color: var(--font-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+    padding: 0 0.5rem;
+  }
+  .header-container {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .log-in-btn {
+    padding: 0.9rem 0.9rem 0.9rem 0;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--background-faint-color);
+  }
+  .log-in-btn i {
+    margin-right: 0.5rem;
+    font-weight: bolder;
+  }
+  .log-in-btn a {
+    font-weight: bolder;
+  }
+  .desktop-menu li a:hover {
+    color: var(--secondary-color);
+  }
+}

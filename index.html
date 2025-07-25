@@ -4,16 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <meta
+      name="description"
+      content="Abibat Fitness App is a one page static app built with HTML and CSS with a little javascript."
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Abibat Fitness App</title>
   </head>
   <body>
-    <header>
+    <header class="header-container">
       <!-- Header Section -->
       <div class="navbar">
-        <div class="logo">
+        <div class="header-logo">
           <a href="index.html">
             <img src="images/logo.png" alt="Fitness App Logo" />
           </a>
@@ -24,21 +33,19 @@
           </span>
         </div>
         <!-- list desktop view section -->
-        <ul>
+        <ul class="desktop-menu">
           <li><a href="index.html"> Home </a></li>
           <li><a href="about.html">About</a></li>
           <li>
             <a href="blog.html">Blog</a>
           </li>
-          <li>
-            <button>
-              <a href="log-in.html"> <i class="fa-solid fa-user"></i> Log In</a>
-            </button>
+          <li class="log-in-btn">
+            <a href="log-in.html"> <i class="fa-solid fa-user"></i> Log In</a>
           </li>
         </ul>
 
         <!-- list section mobile view -->
-        <ul class="mobile-menu">
+        <!-- <ul class="mobile-menu">
           <li><a href="index.html"> Home </a></li>
           <li><a href="about.html">About</a></li>
           <li>
@@ -49,6 +56,7 @@
               <a href="log-in.html"> <i class="fa-solid fa-user"></i> Log In</a>
             </button>
           </li>
+        </ul> -->
       </div>
     </header>
     <!-- Hero section -->
@@ -71,193 +79,189 @@
           </button>
         </div>
         <div class="hero-img">
-            <img src="images/hero-bg.png" alt="image of a person exercising" />
+          <img src="images/hero-bg.png" alt="image of a person exercising" />
         </div>
       </div>
     </section>
 
     <!-- video-section -->
-     <section>
-        <div class="video-container">
-            <div class="video-txt">
-                <h3>
-                    Discover how our app works and get fit in no time
-                </h3>
-            </div>
-            <div class="video">
-                <img src="images/video-preview.png" alt="image showing video-preview">
-            </div>
-            <div class="btn-video">
-                <button>Get Started</button>
-            </div>
-
+    <section>
+      <div class="video-container">
+        <div class="video-txt">
+          <h3>Discover how our app works and get fit in no time</h3>
         </div>
-     </section>
+        <div class="video">
+          <img
+            src="images/video-preview.png"
+            alt="image showing video-preview"
+          />
+        </div>
+        <div class="btn-video">
+          <button>Get Started</button>
+        </div>
+      </div>
+    </section>
 
-     <!-- testimonies section -->
-      <section class="testimonies">
-        <div class="testimonies-container">
+    <!-- testimonies section -->
+    <section class="testimonies">
+      <div class="testimonies-container">
         <div class="testimonies-txt">
-            <h3>Hear from our satisfied users who transformed their lives.</h3>
+          <h3>Hear from our satisfied users who transformed their lives.</h3>
         </div>
         <div class="testimonies-card">
-            <p class="testimonies-txt">
-              “I've lost 10 pounds in just a month! This app keeps me motivated and on track with my fitness goals.”  
-            </p>
-            <p class="testimonies-author">
-                Alice Johnson
-            </p>
-            <p class="testimonies-job">
-                Health Coach
-            </p>
+          <p class="testimonies-txt">
+            “I've lost 10 pounds in just a month! This app keeps me motivated
+            and on track with my fitness goals.”
+          </p>
+          <p class="testimonies-author">Alice Johnson</p>
+          <p class="testimonies-job">Health Coach</p>
         </div>
 
         <div class="testimonies-card">
-            <p class="testimonies-txt">
-              “The workout plans are easy to follow, and the progress tracking feature is incredibly helpful. I feel stronger every day!” 
-            </p>
-            <p class="testimonies-author">
-                Mark Thompson
-            </p>
-            <p class="testimonies-job">
-                Personal Trainer
-            </p>
+          <p class="testimonies-txt">
+            “The workout plans are easy to follow, and the progress tracking
+            feature is incredibly helpful. I feel stronger every day!”
+          </p>
+          <p class="testimonies-author">Mark Thompson</p>
+          <p class="testimonies-job">Personal Trainer</p>
         </div>
 
         <div class="testimonies-card">
-            <p class="testimonies-txt">
-              “This app has changed my fitness routine completely. I love the community support and challenges!” 
-            </p>
-            <p class="testimonies-author">
-                Sarah Parker
-            </p>
-            <p class="testimonies-job">
-                Fitness Enthusiast
-            </p>
+          <p class="testimonies-txt">
+            “This app has changed my fitness routine completely. I love the
+            community support and challenges!”
+          </p>
+          <p class="testimonies-author">Sarah Parker</p>
+          <p class="testimonies-job">Fitness Enthusiast</p>
         </div>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- pricing section -->
-       <section class="pricing">
-        <div class="pricing-container">
-            <div class="pricing-txt">
-                <h3>Pricing</h3>
-                <p>Start with our free plan and unlock premium features as you grow.</p>
-            </div>
-            <div class="pricing-card">
-                <div class="pricing-card-header">
-                    <h3>Basic</h3>
-                    <p>Ideal for beginners to track workouts and monitor progress.</p>
-                    <p class="pricing-card-amt">
-                            free <span>
-                                *No credit card needed
-                            </span>
-                    </p>
-                </div>
-                <hr>
-                <ul class="pricing-card-list">
-                    <li> <i class="fas fa-check"></i> Customizable workout plans</li>
-                    <li><i class="fas fa-check"></i>Track daily progress</li>
-                    <li><i class="fas fa-check"></i>Nutrition tracker
-</li>
-                    <li><i class="fas fa-check"></i>Access to community challenges</li>
-                </ul>
-                <div class="pricing-card-btn">
-                    <button>
-                        <a href="#">Get Started</a>
-                    </button>
-                </div>
-            </div>
-            
-              <div class="pricing-card-header2">
-                    <h3>Pro</h3>
-                    <p>Everything in the Basic plan plus advanced features for serious athletes.</p>
-                    <p class="pricing-card-amt">
-                           $29  <span>
-                                /month
-                            </span>
-                    </p>
-                </div>
-                <hr>
-                <p class="pricing-card-ul-heading">Unlock premium features:</p>
-                <ul class="pricing-card-list">
-                    <li> <i class="fas fa-check"></i> Personalized coaching</li>
-                    <li><i class="fas fa-check"></i>Advanced analytics</li>
-                    <li><i class="fas fa-check"></i>Offline access</li>
-                </ul>
-                <div class="pricing-card-btn">
-                    <button>
-                        <a href="#">Get Started</a>
-                    </button>
-                </div>
-            </div>
-            <p class="pricing-card-footer">
-                All prices are in USD and charged per month with applicable taxes added at checkout.
+    <!-- pricing section -->
+    <section class="pricing">
+      <div class="pricing-container">
+        <div class="pricing-txt">
+          <h3>Pricing</h3>
+          <p>
+            Start with our free plan and unlock premium features as you grow.
+          </p>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3>Basic</h3>
+            <p>Ideal for beginners to track workouts and monitor progress.</p>
+            <p class="pricing-card-amt">
+              free <span> *No credit card needed </span>
             </p>
-
+          </div>
+          <hr />
+          <ul class="pricing-card-list">
+            <li><i class="fas fa-check"></i> Customizable workout plans</li>
+            <li><i class="fas fa-check"></i>Track daily progress</li>
+            <li><i class="fas fa-check"></i>Nutrition tracker</li>
+            <li><i class="fas fa-check"></i>Access to community challenges</li>
+          </ul>
+          <div class="pricing-card-btn">
+            <button>
+              <a href="#">Get Started</a>
+            </button>
+          </div>
         </div>
-       </section>
 
-       <!-- faq section -->
-        <section>
-            <div class="faq-container">
-                <div class="faq-text">
-                    <h3>
-                        Frequently Asked Questions
-                    </h3>
-                    <ul class="faq-list">
-                        <li><button class="faq-list-all">All</button></li>
-                        <li>Getting Started</li>
-                        <li>Pricing</li>
-                    </ul>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-btn">
-                        <span class="faq-btn-qns">How can the app help me achieve my fitness goals?</span>
-                        <span class="faq-btn-icon">
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                        </span>
-                    </button>
-                    </div>
-                    <div class="faq-answer">
-                        <p>The app provides tailored workout plans, tracks your progress, and offers motivation to keep you on track.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-btn">
-                        <span class="faq-btn-qns">Can I customize my workout plans?</span>
-                        <span class="faq-btn-icon">
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                        </span>
-                    </button>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes, you can create personalized workout plans based on your fitness level and goals.</p>
-                    </div>
+        <div class="pricing-card-header2">
+          <h3>Pro</h3>
+          <p>
+            Everything in the Basic plan plus advanced features for serious
+            athletes.
+          </p>
+          <p class="pricing-card-amt">$29 <span> /month </span></p>
+        </div>
+        <hr />
+        <p class="pricing-card-ul-heading">Unlock premium features:</p>
+        <ul class="pricing-card-list">
+          <li><i class="fas fa-check"></i> Personalized coaching</li>
+          <li><i class="fas fa-check"></i>Advanced analytics</li>
+          <li><i class="fas fa-check"></i>Offline access</li>
+        </ul>
+        <div class="pricing-card-btn">
+          <button>
+            <a href="#">Get Started</a>
+          </button>
+        </div>
+      </div>
+      <p class="pricing-card-footer">
+        All prices are in USD and charged per month with applicable taxes added
+        at checkout.
+      </p>
+    </section>
 
-                    <div class="faq-item">
-                    <button class="faq-btn">
-                        <span class="faq-btn-qns">Is there a free trial available?</span>
-                        <span class="faq-btn-icon">
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                        </span>
-                    </button>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes, you can start with our free Basic plan to explore features before upgrading.</p>
-                    </div>
-            </div>
-        </section>
-        <footer>
-            <div class="footer-container">
-                <img src="images/logo-white-footer.png" alt="logo-footer">
-                <p>Privacy Policy</p>
-                <p>Terms of Service</p>
-                <p>Contact Us</p>
-            </div>
-        </footer>
-          <script src="main.js"></script>
+    <!-- faq section -->
+    <section>
+      <div class="faq-container">
+        <div class="faq-text">
+          <h3>Frequently Asked Questions</h3>
+          <ul class="faq-list">
+            <li><button class="faq-list-all">All</button></li>
+            <li>Getting Started</li>
+            <li>Pricing</li>
+          </ul>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">
+            <span class="faq-btn-qns"
+              >How can the app help me achieve my fitness goals?</span
+            >
+            <span class="faq-btn-icon">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+        <div class="faq-answer">
+          <p>
+            The app provides tailored workout plans, tracks your progress, and
+            offers motivation to keep you on track.
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn">
+          <span class="faq-btn-qns">Can I customize my workout plans?</span>
+          <span class="faq-btn-icon">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </span>
+        </button>
+      </div>
+      <div class="faq-answer">
+        <p>
+          Yes, you can create personalized workout plans based on your fitness
+          level and goals.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">
+          <span class="faq-btn-qns">Is there a free trial available?</span>
+          <span class="faq-btn-icon">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </span>
+        </button>
+      </div>
+      <div class="faq-answer">
+        <p>
+          Yes, you can start with our free Basic plan to explore features before
+          upgrading.
+        </p>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <img src="images/logo-white-footer.png" alt="logo-footer" />
+        <p>Privacy Policy</p>
+        <p>Terms of Service</p>
+        <p>Contact Us</p>
+      </div>
+      <div id="footer-buttom" class="footer-buttom"></div>
+    </footer>
+    <script src="main.js"></script>
   </body>
-
 </html>
