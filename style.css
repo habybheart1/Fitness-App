@@ -13,13 +13,14 @@ body {
   --secondary-color: #61a0ff;
   --background-faint-color: #f6f6f8;
 }
-.header-container {
-  max-width: 1200px;
-  margin: 15px 20px;
+.header-container,
+.hero-container {
+  max-width: 1000px;
+  margin: 15px 10px;
   text-align: center;
 }
 .header-logo img {
-  width: 8.5rem;
+  width: 8rem;
   margin-top: 0.5rem;
 }
 /* contain the logo, li and icon */
@@ -28,9 +29,10 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 1.5rem;
+  flex-shrink: 0;
 }
 .menu-toggle {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin-top: 0;
 }
 /* desktop view */
@@ -48,10 +50,11 @@ body {
   .desktop-menu {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 2.25rem;
     margin: 0;
     font-weight: 600;
+    white-space: nowrap;
   }
   .desktop-menu li {
     list-style: none;
@@ -59,20 +62,21 @@ body {
   .desktop-menu li a {
     text-decoration: none;
     color: var(--font-color);
-    font-weight: 600;
+    font-weight: 650;
     transition: color 0.3s ease;
-    padding: 0 0.5rem;
+    word-spacing: 0.6rem;
   }
   .header-container {
-    width: 80%;
-    text-align: center;
+    width: 70%;
     margin: 0 auto;
   }
   .log-in-btn {
-    padding: 0.9rem 0.9rem 0.9rem 0;
+    padding: 0.9rem;
     border: none;
     border-radius: 10px;
     background-color: var(--background-faint-color);
+    cursor: pointer;
+    /* transition: background-color 0.3s ease; */
   }
   .log-in-btn i {
     margin-right: 0.5rem;
@@ -83,5 +87,486 @@ body {
   }
   .desktop-menu li a:hover {
     color: var(--secondary-color);
+  }
+}
+@media (min-width: 1024px) {
+  .header-container {
+    width: 90%;
+  }
+  .navbar {
+    padding: 1.5rem 3rem;
+  }
+}
+
+/* hero section */
+.hero-txt {
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+}
+.hero-txt h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--font-color);
+  line-height: 2.5rem;
+  padding-bottom: 1.25rem;
+}
+.hero-txt p {
+  font-size: 16px;
+  padding: 0 0.5rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+  .hero-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .hero-txt h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    width: 100%;
+    font-weight: 600;
+  }
+  .hero-txt {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    width: 70%;
+  }
+  .hero-txt p {
+    margin-bottom: 1.5rem;
+    font-size: 18px;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+/* hero section button */
+.hero-btn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.hero-btn a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+.btn-get-started,
+.pricing-card-btn {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem;
+  background-color: var(--secondary-color);
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+.btn-get-started:hover,
+.pricing-card-btn:hover {
+  background-color: #8bb6f7;
+}
+.btn-demo {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem;
+  background-color: var(--background-faint-color);
+  font-size: 1.05rem;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.btn-demo:hover {
+  background-color: #f5f5f7;
+}
+/* hero img section */
+.hero-img img {
+  width: 100%;
+  flex: 1;
+  margin-top: 2rem;
+}
+/* media query for button */
+@media (min-width: 768px) {
+  .hero-btn {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  .btn-get-started,
+  .btn-demo {
+    width: 20%;
+    padding: 0.75rem 0.5rem;
+  }
+  .hero-img img {
+    display: none;
+  }
+  .hero-container {
+    background: url(images/hero-bg.png) no-repeat center bottom;
+    background-size: contain;
+    height: 550px;
+    width: 100%;
+  }
+}
+
+/* video-section */
+.video-container {
+  background-color: black;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.video-txt h2,
+.testimonies-txt h2 {
+  color: white;
+  line-height: 2.5rem;
+  margin: 40px 0 20px;
+  font-size: 1.9rem;
+  font-weight: 0;
+  width: 100%;
+  padding: 3.5rem 1rem 0.5rem 1rem;
+}
+.video-img img {
+  width: 90%;
+  margin-bottom: 2rem;
+}
+.btn-video .btn {
+  width: 50%;
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem 0.4rem;
+  background-color: var(--secondary-color);
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+/* media query for desktop view video section */
+@media (min-width: 1024px) {
+  .video-txt {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .video-txt h2 {
+    font-size: 2.15rem;
+  }
+  .video-img img {
+    max-width: 70%;
+  }
+  .btn-video .btn {
+    width: 15%;
+    padding: 0.5rem o.4rem;
+  }
+}
+
+/* testimonies section */
+.testimonies-container {
+  background-color: var(--font-color);
+  color: white;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.testimonies-card,
+.pricing-card {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 1.25rem;
+}
+.testimonies-details {
+  background-color: #f6f6f8;
+  padding: 1.25rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #1e1e1e;
+  text-align: left;
+}
+.testimonies-author {
+  margin-top: 2rem;
+  font-weight: bold;
+}
+.testimonies-job {
+  font-weight: 600;
+}
+@media (min-width: 950px) {
+  .testimonies-container {
+    padding: 0 8.75rem;
+    margin-bottom: 20px;
+  }
+  .testimonies-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .testimonies-details {
+    margin-bottom: 2rem;
+  }
+}
+/* pricing section styling */
+.pricing-container {
+  text-align: center;
+  margin: 0 auto;
+}
+.pricing-txt h2 {
+  line-height: 2.5rem;
+  margin: 30px 0 10px;
+  font-size: 1.9rem;
+  font-weight: 0;
+  width: 100%;
+  padding: 1rem;
+}
+.pricing-txt p {
+  font-size: 1.1rem;
+  padding-bottom: 2rem;
+}
+.pricing-card1 {
+  background-color: var(--background-faint-color);
+  width: 95%;
+  margin: 0 auto;
+  text-align: left;
+  padding: 2.5rem 2rem;
+  border: none;
+  border-radius: 10px;
+}
+.pricing-card2 {
+  background-color: var(--font-color);
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+  padding: 2.5rem 2rem;
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  .pricing-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+/* styling the content in the card */
+
+.pricing-card-header h3 {
+  font-size: 2rem;
+  padding: 0;
+  margin: 2rem 0;
+}
+.pricing-card-header p {
+  margin-bottom: 1.025rem;
+}
+.pricing-card-amt span {
+  font-size: 0.95rem;
+}
+.pricing-card-amt {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.pricing-card-header {
+  border-bottom: solid 1px #ccc;
+}
+/* syling ul in pricing */
+.pricing-card-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.pricing-card-list li {
+  padding: 10px 0;
+}
+.pricing-card-list li i {
+  padding-right: 10px;
+}
+.pricing-card-btn {
+  text-align: center;
+}
+.pricing-card-btn a {
+  text-decoration: none;
+  color: white;
+}
+.pricing-card-ul-heading {
+  padding: 10px 0;
+}
+.pricing-card-footer {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+}
+
+/* responsive for pricing ul */
+/* faq styling */
+.faq-container {
+  background-color: var(--background-faint-color);
+}
+.faq-text h3 {
+  text-align: center;
+  font-size: 1.75rem;
+  padding: 3.25rem;
+}
+.faq-list {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  background-color: #dddddd;
+  width: 60%;
+  margin: 0 auto;
+  padding: 0.5rem 0.25rem 0.5rem 0;
+  border-radius: 10px;
+  border: none;
+  color: var(--font-color);
+}
+.faq-list:first-child {
+  padding-left: 0;
+}
+.faq-list-all {
+  background-color: var(--secondary-color);
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .faq-list {
+    width: 25%;
+  }
+}
+
+/* FAQ Section */
+.faq-section {
+  background-color: #f3f4f6;
+  padding: 2.5rem 1rem;
+}
+
+.faq-container {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 0.25rem;
+}
+
+.faq-heading {
+  font-size: 1.875rem;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .faq-heading {
+    font-size: 2.25rem;
+  }
+}
+
+.faq-categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d1d5db;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  list-style: none;
+}
+
+.faq-category {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.faq-category.active {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+.faq-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid #d1d5db;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1f2937;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  padding: 1rem 0;
+}
+
+@media (min-width: 1024px) {
+  .faq-question {
+    font-weight: 700;
+    padding-bottom: 2rem;
+  }
+}
+
+.faq-icon {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  color: #4b5563;
+  padding-bottom: 1rem;
+  display: none;
+}
+
+.faq-answer.active {
+  display: block;
+}
+
+/* styling footer */
+.footer-container {
+  background-color: var(--font-color);
+  padding: 2.5rem 1.5rem 0 1.5rem;
+}
+.footer-container img {
+  width: 7rem;
+}
+.footer-container p {
+  padding: 10px;
+  color: white;
+}
+.footer-buttom {
+  background-color: var(--font-color);
+  padding: 0 10px;
+  text-align: center;
+  color: white;
+  font-size: 0.8rem;
+}
+@media (min-width: 768px) {
+  .footer-container {
+    padding: 20px;
+  }
+  .footer-buttom {
+    font-size: 1rem;
+  }
+  .footer-container p {
+    font-size: larger;
   }
 }
